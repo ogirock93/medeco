@@ -1,2 +1,0 @@
-# medeco
-first team project
