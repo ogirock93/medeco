@@ -30,7 +30,8 @@
 <div class="bread_crumbs">
   <div class="container">
     <img src="img_2/house.svg" alt="house">
-    <p><img class="big_pading" src="img_2/big.svg" alt="img"><span></span>Услуги</p>
+		<a href="#"><img class="big_pading" src="img_2/big.svg" alt="img">Услуги</a>
+    <p><img class="big_pading" src="img_2/big.svg" alt="img">Ортодонтия</p>
   </div>
 </div>
 
@@ -59,7 +60,11 @@
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" style="background: radial-gradient(82.31% 111.32% at 100% 35.14%, rgba(17, 31, 43, 0) 5.39%, rgba(17, 31, 43, 0.172414) 28.3%, rgba(17, 31, 43, 0.917879) 67.28%, #111F2B 79.36%), url(img_2/bg_form.png);
+ 		background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-repeat: no-repeat;">
   <div class="container">
     <div class="contact_grafic">
       <h2>Контакты и график</h2>
@@ -79,17 +84,17 @@
         </div>
     </div>
     <div class="form">
-      <form class="" action="index.html" method="post">
+      <form class="" id="contact_form" action="index.html" method="post">
         <div class="name">
-          <input type="text" name="first_name" value="" placeholder="Имя">
-          <input type="text" name="last_name" value="" placeholder="Фамилия">
+          <div><input type="text" name="first_name" value="" placeholder="Имя"></div>
+          <div><input type="text" name="last_name" value="" placeholder="Фамилия"></div>
         </div>
         <div class="tel_mail">
-          <input type="tel" name="phone" value="" placeholder="Телефон">
-          <input type="email" name="email" value="" placeholder="Email">
+					<div><input type="tel" name="phone" value="" placeholder="Телефон"></div>
+					<div><input type="email" name="email" value="" placeholder="Email"></div>
         </div>
-        <select class="" name="servise" title="Email">
-          <option value="" disabled selected>Услуга</option>
+        <select class="" name="servise" title="">
+          <option value="" selected disabled hiden>Услуга</option>
           <option>Ортодонтия</option>
           <option>Отбеливание зубов</option>
           <option>Ортодонтия</option>
@@ -105,6 +110,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/script.js"></script>
