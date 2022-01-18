@@ -54,9 +54,17 @@ $(document).ready(function(){
      {
         breakpoint: 1200,
         settings: {
-          slidesToShow:3,
+          arrows:true,
         }
       },
+      {
+         breakpoint: 768,
+         settings: {
+           arrows:true,
+           slidesToShow: 1,
+           variableWidth: false,
+         }
+       },
     ]
   });
 

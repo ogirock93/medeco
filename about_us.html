@@ -69,7 +69,11 @@
   </div>
 </section>
 
-<section class="about_reviews">
+<section class="about_reviews" style="background: radial-gradient(82.31% 111.32% at 100% 35.14%, rgba(17, 31, 43, 0) 5.39%, rgba(17, 31, 43, 0.172414) 28.3%, rgba(17, 31, 43, 0.917879) 67.28%, #111F2B 79.36%), url(img_2/about_us_photo.png);
+		background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-repeat: no-repeat;">
   <div class="container">
     <div class="slider_reviews">
       <div class="grid_cat">
@@ -120,6 +124,54 @@
         </a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="contact" style="background: radial-gradient(82.31% 111.32% at 100% 35.14%, rgba(17, 31, 43, 0) 5.39%, rgba(17, 31, 43, 0.172414) 28.3%, rgba(17, 31, 43, 0.917879) 67.28%, #111F2B 79.36%), url(img_2/bg_form.png);
+ 		background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-repeat: no-repeat;">
+  <div class="container">
+    <div class="contact_grafic">
+      <h2>Контакты и график</h2>
+      <p>Записаться на прием или получить консультацию можно по телефонам:</p>
+      <div class="tel">
+        <a href="tel:+380999999999">+38 099 99 99 999</a>
+        <a href="tel:+380633333333">+38 063 33 33 333</a>
+      </div>
+      <p>График роботы:</p>
+        <div class="grafic_1">
+          <h3>пн - сб</h3>
+          <h4>c <span>9:00</span> до <span>20:00</span></h4>
+        </div>
+        <div class="grafic_1">
+          <h3>вс</h3>
+          <h4>выходной</h4>
+        </div>
+    </div>
+    <div class="form">
+      <form class="" id="contact_form" action="index.html" method="post">
+        <div class="name">
+          <div><input type="text" name="first_name" value="" placeholder="Имя"></div>
+          <div><input type="text" name="last_name" value="" placeholder="Фамилия"></div>
+        </div>
+        <div class="tel_mail">
+					<div><input type="tel" name="phone" value="" placeholder="Телефон"></div>
+					<div><input type="email" name="email" value="" placeholder="Email"></div>
+        </div>
+        <select class="" name="servise" title="">
+          <option value="" selected disabled hiden>Услуга</option>
+          <option>Ортодонтия</option>
+          <option>Отбеливание зубов</option>
+          <option>Ортодонтия</option>
+          <option>Лечение зубов и десен</option>
+          <option>Отбеливание зубов</option>
+          <option>Ортодонтия</option>
+        </select>
+        <button type="button" name="button">Заказать звонок</button>
+      </form>
     </div>
   </div>
 </section>
