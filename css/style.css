@@ -198,8 +198,8 @@ a.button:hover {
   opacity: 0.8;
 }
 
-.s_title {
-  padding: 60px 0 0 !important;
+.screen1.s_title {
+  padding: 60px 0 60px !important;
   display: block;
   position: relative;
   overflow: hidden;
@@ -218,7 +218,7 @@ a.button:hover {
   border-radius: 50%;
 }
 
-.screen1:after {
+.screen1.s_title:after {
   content: "";
   position: absolute;
   display: block;
@@ -226,8 +226,8 @@ a.button:hover {
   height: 50px;
   padding: 25px;
   border: 25px solid #F8D72F;
-  top: 50%;
-  left: 62%;
+  bottom: 155px;
+  right: 268px;
   background: transparent;
   border-radius: 50%;
 }
@@ -238,7 +238,7 @@ a.button:hover {
 }
 
 .screen1 .first-row {
-  width: 45%;
+  width: 100%;
 }
 
 .screen1 h1 {
@@ -271,7 +271,7 @@ a.button.eyllow {
 
 .screen1 .table-row {
   border: 2px white solid;
-  margin-top: 120px;
+  margin-top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,7 +302,6 @@ a.button.eyllow {
 }
 
 .side-bar {
-  margin-top: 60px;
   position: relative;
 }
 .side-bar:after {

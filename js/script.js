@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  $('.popup_1').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#username',
+    modal: true
+  });
+  $(document).on('click', '.popup-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
+
   var $slider = $('.slider');
   var $progressBar = $('.progress');
   var $progressBarLabel = $( '.slider__label' );
@@ -124,3 +136,22 @@ $(document).ready(function(){
 
 
 })
+
+
+// script burger
+$(document).ready(function () {
+  $(".open").click(function () {
+      $(".open").hide()
+      $(".close_menu, .mobile_menu").show()
+      $('body').addClass("lock")
+      $('header').addClass("active");
+  });
+
+  $(".close_menu").click(function () {
+      $(".close_menu, .mobile_menu").hide()
+      $(".open").show()
+      $('body').removeClass("lock");
+      $('header').removeClass("active");
+  });
+})
+// script end
