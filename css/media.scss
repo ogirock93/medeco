@@ -406,8 +406,13 @@ a.button{
     border: none;
     padding: 0 94px;
     box-shadow: none;
+    position: inherit;
+    padding-top: 60px;
     .contact_grafic{
       margin-bottom: 40px;
+      p{
+        width: 100%;
+      }
     }
     .map{
       width: 100%;
@@ -418,6 +423,35 @@ a.button{
   .mfp-container{
     padding: 0;
     background: #111F2A;
+  }
+
+  .mfp-content{
+    position: initial;
+  }
+
+  .popup-dismiss{
+    display: none;
+  }
+
+  .popup-dismiss_mob{
+    display: block;
+    position: absolute;
+    top: 30px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0;
+    text-decoration: none !important;
+    &:hover{
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
+    img{
+      margin-right: 10px;
+    }
   }
 }
 
@@ -705,11 +739,15 @@ table tr{
 
 .slider_reviews .slick-arrow.slick-prev {
   left: calc(50% - 160px);
+  background: url(../img_2/Arrow_mob_left.svg) 0 0/65% no-repeat;
+  background-position: center;
 }
 
 .slider_reviews .slick-arrow.slick-next {
   right: calc(50% - 160px);
   left: auto;
+  background: #F8D72F url(../img_2/Arrow_mob_right.svg) 0 0/65% no-repeat;
+  background-position: center;
 }
 
 .slider_reviews .slick-arrow{
@@ -838,6 +876,21 @@ a.button{
 .socs-row {
     padding-top: 40px;
     padding-bottom: 30px;
+}
+
+.white-popup-block{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.white-popup-block .map{
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+
+.mfp-container{
+  display: flex;
+  align-items: end;
 }
 
 }

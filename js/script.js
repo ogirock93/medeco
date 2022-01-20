@@ -5,9 +5,9 @@ if ($(".popup_1").length > 0){
     type: 'inline',
     preloader: false,
     focus: '#username',
-    modal: true
+    modal: false,
   });
-  $(document).on('click', '.popup-dismiss', function (e) {
+  $(document).on('click', '.popup-dismiss ,.popup-dismiss_mob', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
   });
@@ -156,3 +156,11 @@ $(document).ready(function () {
   });
 })
 // script end
+
+$(document).ready(function () {
+  $(".btn_fix").click(function () {
+    $(".form_call").show("slow");
+  });
+
+
+})
