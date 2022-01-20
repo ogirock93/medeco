@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+if ($(".popup_1").lenght > 0){
+
   $('.popup_1').magnificPopup({
     type: 'inline',
     preloader: false,
@@ -10,6 +12,7 @@ $(document).ready(function(){
     e.preventDefault();
     $.magnificPopup.close();
   });
+}
 
 
   var $slider = $('.slider');
@@ -133,7 +136,6 @@ $(document).ready(function(){
       // return false;
     }
   })
-
 
 })
 

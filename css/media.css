@@ -364,6 +364,10 @@
     border-radius: 0;
     border: none;
     padding: 0 94px;
+    box-shadow: none;
+  }
+  .white-popup-block .contact_grafic {
+    margin-bottom: 40px;
   }
   .white-popup-block .map {
     width: 100%;
@@ -372,6 +376,7 @@
 
   .mfp-container {
     padding: 0;
+    background: #111F2A;
   }
 }
 @media (max-width: 991px) {

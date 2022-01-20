@@ -405,6 +405,10 @@ a.button{
     border-radius: 0;
     border: none;
     padding: 0 94px;
+    box-shadow: none;
+    .contact_grafic{
+      margin-bottom: 40px;
+    }
     .map{
       width: 100%;
       margin-left: 0;
@@ -413,6 +417,7 @@ a.button{
 
   .mfp-container{
     padding: 0;
+    background: #111F2A;
   }
 }
 
