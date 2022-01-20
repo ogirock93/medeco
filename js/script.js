@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-if ($(".popup_1").lenght > 0){
-
+if ($(".popup_1").length > 0){
   $('.popup_1').magnificPopup({
     type: 'inline',
     preloader: false,
@@ -82,7 +81,7 @@ if ($(".popup_1").lenght > 0){
        },
     ]
   });
-
+if ($("#contact_form").length > 0){
     $("#contact_form").validate({
     rules: {
       first_name: {
@@ -136,7 +135,7 @@ if ($(".popup_1").lenght > 0){
       // return false;
     }
   })
-
+}
 })
 
 
