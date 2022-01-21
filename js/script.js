@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+
+  // initalize popup
+  $('.popup_work').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#username',
+    modal: false,
+  });
+  $(document).on('click', '.popup-dismiss ,.popup-dismiss_mob', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
+
+
 if ($(".popup_1").length > 0){
   $('.popup_1').magnificPopup({
     type: 'inline',
@@ -12,7 +27,10 @@ if ($(".popup_1").length > 0){
     $.magnificPopup.close();
   });
 }
+})
 
+
+$(document).ready(function(){
 
   var $slider = $('.slider');
   var $progressBar = $('.progress');
@@ -138,7 +156,6 @@ if ($("#contact_form").length > 0){
 }
 })
 
-
 // script burger
 $(document).ready(function () {
   $(".open").click(function () {
@@ -156,11 +173,3 @@ $(document).ready(function () {
   });
 })
 // script end
-
-$(document).ready(function () {
-  $(".btn_fix").click(function () {
-    $(".form_call").show("slow");
-  });
-
-
-})
