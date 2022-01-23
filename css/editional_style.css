@@ -959,12 +959,12 @@ table tr th {
   text-align: left;
   margin-right: 10px;
 }
-.grid_cat a {
+.grid_cat .popup_work {
   text-align: center;
   display: block;
   text-decoration: none;
 }
-.grid_cat a img {
+.grid_cat .popup_work img {
   height: 400px;
   width: auto;
   object-fit: cover;
@@ -973,7 +973,7 @@ table tr th {
   filter: drop-shadow(0px 10px 35px rgba(0, 61, 108, 0.33));
   border-radius: 10px;
 }
-.grid_cat a h3 {
+.grid_cat .popup_work h3 {
   font-weight: bold;
   font-size: 24px;
   line-height: 33px;
@@ -981,14 +981,14 @@ table tr th {
   margin-top: 20px;
   margin-bottom: 0;
 }
-.grid_cat a p {
+.grid_cat .popup_work p {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: #FFFFFF;
   opacity: 0.5;
 }
-.grid_cat a span {
+.grid_cat .popup_work span {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -1678,6 +1678,12 @@ button.mfp-close {
   object-fit: cover;
   border-radius: 20px;
 }
+.popup_our_work video {
+  width: 795px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 .popup_our_work .cat_bottom {
   display: flex;
   align-items: baseline;
@@ -1742,6 +1748,165 @@ button.mfp-close {
 .mobile_input {
   display: flex;
   align-items: center;
+}
+
+.grid_cat > .column {
+  padding: 0 8px;
+}
+
+.grid_cat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent;
+}
+
+.modal:after {
+  content: "";
+  width: 100%;
+  height: 120%;
+  background: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: transparent;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  border: none;
+  box-shadow: none;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  right: 8%;
+  font-size: 60px;
+  font-weight: bold;
+  z-index: 8;
+  opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -40px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 30px;
+  padding: 9px 18px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 2%;
+  background: #F8D72F;
+  border: 2px solid #F8D72F;
+}
+.next img {
+  filter: invert(1);
+}
+
+.prev {
+  left: 2%;
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grade_star {
+  display: flex;
+}
+.grade_star img {
+  width: 50px;
+  height: 50px;
+}
+
+.grade_popup {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.grade_popup h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000205;
+  margin-bottom: 0;
+}
+.grade_popup span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000205;
+  opacity: 0.5;
+}
+
+.popup_our_work.reviews {
+  height: auto;
 }
 
 @media (max-width: 1360px) {
@@ -1960,20 +2125,20 @@ button.mfp-close {
     margin-right: 15px;
   }
 
-  .grid_cat a img {
+  .grid_cat .popup_work img {
     height: 270px;
     width: 100%;
   }
-  .grid_cat a h3 {
+  .grid_cat .popup_work h3 {
     font-size: 18px;
     line-height: 25px;
     margin-top: 10px;
   }
-  .grid_cat a p {
+  .grid_cat .popup_work p {
     font-size: 12px;
     line-height: 16px;
   }
-  .grid_cat a span {
+  .grid_cat .popup_work span {
     font-size: 14px;
     line-height: 19px;
   }
@@ -2685,7 +2850,7 @@ button.mfp-close {
     width: 235px;
     box-sizing: border-box;
     display: flex;
-    justify-content: end;
+    justify-content: right;
     height: 50px;
   }
 
@@ -2817,7 +2982,7 @@ button.mfp-close {
     margin-top: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .grid_cat a img {
+  .grid_cat .popup_work img {
     height: 320px;
   }
 

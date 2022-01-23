@@ -214,20 +214,20 @@
     margin-right: 15px;
   }
 
-  .grid_cat a img {
+  .grid_cat .popup_work img {
     height: 270px;
     width: 100%;
   }
-  .grid_cat a h3 {
+  .grid_cat .popup_work h3 {
     font-size: 18px;
     line-height: 25px;
     margin-top: 10px;
   }
-  .grid_cat a p {
+  .grid_cat .popup_work p {
     font-size: 12px;
     line-height: 16px;
   }
-  .grid_cat a span {
+  .grid_cat .popup_work span {
     font-size: 14px;
     line-height: 19px;
   }
@@ -939,7 +939,7 @@
     width: 235px;
     box-sizing: border-box;
     display: flex;
-    justify-content: end;
+    justify-content: right;
     height: 50px;
   }
 
@@ -1071,7 +1071,7 @@
     margin-top: 20px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .grid_cat a img {
+  .grid_cat .popup_work img {
     height: 320px;
   }
 
