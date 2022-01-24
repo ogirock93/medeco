@@ -161,7 +161,7 @@
       </div>
     </div>
     <ul class="page_number">
-      <li><a href="#" class="arows left"><img src="img_2/arrow_left.svg" alt="left"></a></li>
+      <li><a href="#" class="arows disabled left"><img src="img_2/arrow_left.svg" alt="left"></a></li>
       <li><span class="curent">1</span></li>
       <li> <a href="#">2</a> </li>
       <li> <a href="#">3</a> </li>
@@ -342,8 +342,14 @@
 		</div>
 
 
-    <a class="prev" onclick="plusSlides(-1)"><img src="img_2/arrow_left.svg" alt="left"></a>
-    <a class="next" onclick="plusSlides(1)"><img src="img_2/arrow_right.svg" alt="right"></a>
+    <a class="prev" onclick="plusSlides(-1)">
+			<img class="desctop" src="img_2/arrow_left.svg" alt="left">
+			<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+		</a>
+    <a class="next" onclick="plusSlides(1)">
+			<img class="desctop" src="img_2/arrow_right.svg" alt="right">
+			<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+		</a>
   </div>
 </div>
 

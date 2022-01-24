@@ -47,7 +47,7 @@ $(document).ready(function(){
   });
   $('.slider').slick({
     arrows:false,
-    infinite: true,
+    infinite: false,
     slidesToShow:4,
     responsive: [
      {
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
   $('.slider_reviews').slick({
     arrows:true,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 1,
     centerMode: false,
@@ -173,3 +173,29 @@ $(document).ready(function () {
   });
 })
 // script end
+
+// script btn_fix
+$(document).ready(function () {
+  $(".call_btn").click(function () {
+    $('.call_btn').addClass("click")
+  });
+  $(".chat_btn").click(function () {
+    $('.chat_btn').addClass("click")
+  });
+
+})
+
+
+
+
+  jQuery(function($){
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+        var block = $(".call_btn, .chat_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+        if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+            && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            $('.call_btn').removeClass("click") // если условия выполняются - скрываем наш элемент
+            $('.chat_btn').removeClass("click")
+        }
+    });
+});
+// script_fix end

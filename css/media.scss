@@ -404,6 +404,16 @@ a.button{
   width: 626px;
   height: 394px;
 }
+
+.popup_our_work video{
+  width: 626px;
+  height: 400px;
+}
+
+.grade_star img{
+  width: 50px;
+  height: 50px;
+}
 }
 
 @media (max-width: 1040px){
@@ -527,6 +537,20 @@ a.button{
     left: calc(28% + 120px);
   }
 
+.popup_our_work video{
+  width: 100%;
+}
+
+.popup_our_work.reviews{
+  width: 70%;
+}
+.popup_our_work{
+  width: 70%;
+}
+
+.popup_our_work img {
+    width: 100%;
+}
 }
 
 @media (max-width: 768px){
@@ -759,8 +783,10 @@ table tr{
 
 .slider_reviews .slick-arrow.slick-prev {
   left: calc(50% - 160px);
-  background: url(../img_2/Arrow_mob_left.svg) 0 0/65% no-repeat;
+  background:#F8D72F url(../img_2/Arrow_mob_right.svg) 0 0/65% no-repeat;
   background-position: center;
+  transform: rotate(180deg);
+  transition: 0s;
 }
 
 .slider_reviews .slick-arrow.slick-next {
@@ -768,6 +794,24 @@ table tr{
   left: auto;
   background: #F8D72F url(../img_2/Arrow_mob_right.svg) 0 0/65% no-repeat;
   background-position: center;
+}
+
+.slider_reviews .slick-arrow.slick-prev.slick-disabled{
+  background:transparent url('../img_2/Arrow_mob_left.svg') 0 0 /65% no-repeat;
+  background-position: center;
+  border: 2px solid #FFFFFF;
+  filter: opacity(0.3);
+  transform: rotate(0deg);
+  transition: 0s;
+}
+
+.slider_reviews .slick-arrow.slick-next.slick-disabled{
+  background:transparent url('../img_2/Arrow_mob_left.svg') 0 0 /65% no-repeat;
+  background-position: center;
+  border: 2px solid #FFFFFF;
+  filter: opacity(0.3);
+  transform: rotate(180deg);
+  transition: 0s;
 }
 
 .slider_reviews .slick-arrow{
@@ -914,7 +958,7 @@ a.button{
 
 
 .popup_our_work{
-  width: 90%;
+  width: 100%;
   height: 500px;
 }
 
@@ -1026,6 +1070,58 @@ a.button{
 
 .call_btn{
   align-items: center;
+}
+
+.popup_our_work.reviews{
+  width: 100%;
+}
+
+.popup_our_work video{
+  height: auto;
+}
+
+.grade_star img{
+  width: 28px;
+  height: 28px;
+}
+
+.grade_popup span {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.grade_popup{
+  padding-bottom: 0;
+  flex-direction: column-reverse;
+}
+
+.close{
+  top: 1%;
+  right: 3%;
+  opacity: 0.7;
+  filter: invert(1);
+}
+
+.prev, .next{
+  top: auto;
+  bottom: -65px;
+  width: 45%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next{
+  transform: rotate(180deg);
+}
+
+.mob_img_popup{
+	display: block;
+}
+
+.desctop{
+  display: none;
 }
 
 }

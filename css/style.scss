@@ -35,9 +35,6 @@ a.button{
 	text-decoration: none;
 	transition: 0.3s;
 	background: transparent;
-	&:hover{
-		opacity: 0.8;
-	}
 }
 .header ul{
 	padding: 0;
@@ -92,6 +89,7 @@ a.button{
 		opacity: 1;
 		visibility: visible;
 		top: 100%;
+		box-shadow: 0px 10px 35px rgb(0 0 0 / 50%);
 	}
 		&:after{
 			filter: invert(100%);
@@ -246,7 +244,13 @@ a.button{
 a.button.eyllow{
 	background: #F8D72F;
 	border: 2px solid #F8D72F;
+	color: #000000;
+	&:hover{
+		box-shadow: 0px 10px 35px rgba(248, 215, 47, 0.5);
+	}
 }
+
+
 .screen1 a.button.eyllow{
 	margin-right: 20px;
 }
