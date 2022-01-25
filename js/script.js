@@ -1,6 +1,38 @@
 $(document).ready(function(){
 
 
+  $('.slider_screen_1').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   infinite: false,
+   fade: true,
+   swipe: false,
+   asNavFor: '.table-row_slider',
+   speed: 300,
+   responsive: [
+    {
+       breakpoint: 768,
+       settings: {
+         autoplay: true,
+         autoplaySpeed: 5000,
+       }
+     },
+   ]
+
+ });
+ $('.table-row_slider').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   asNavFor: '.slider_screen_1',
+   dots: false,
+   infinite: false,
+   swipe: false,
+   centerMode: true,
+   focusOnSelect: true
+ });
+
+
   // initalize popup
   $('.popup_work').magnificPopup({
     type: 'inline',
@@ -99,6 +131,7 @@ $(document).ready(function(){
        },
     ]
   });
+
 if ($("#contact_form").length > 0){
     $("#contact_form").validate({
     rules: {
@@ -156,28 +189,60 @@ if ($("#contact_form").length > 0){
 }
 })
 
-// script burger
+
 $(document).ready(function () {
-  $(".open").click(function () {
-      $(".open").hide()
-      $(".close_menu, .mobile_menu").show()
-      $('body').addClass("lock")
-      $('header').addClass("active");
+  $(".buger_btn").click(function (event) {
+    $('body').toggleClass("lock")
+    $('.mobile_heading').toggleClass("active");
+    $('.mobile_menu').toggleClass("active");
+    $('.header_mobile').toggleClass("active");
+    $('.buger_btn span').toggleClass("open");
+    });
+
+$(".menu-item-has-children").click(function (event) {
+  $('.sub-menu').slideDown();
+  $('.buger_btn span').toggleClass("active_sub");
   });
 
-  $(".close_menu").click(function () {
-      $(".close_menu, .mobile_menu").hide()
-      $(".open").show()
-      $('body').removeClass("lock");
-      $('header').removeClass("active");
+  jQuery(function($){
+    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+        var block = $(".menu-item-has-children"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+        if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+            && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+              // если условия выполняются - скрываем наш элемент
+            $('.sub-menu').slideUp()
+        }
+    });
   });
+
+
+
 })
+// script burger
+//$(document).ready(function () {
+//  $(".open").click(function () {
+//      $(".open").hide()
+//      $(".close_menu").show()
+//      $(".mobile_menu").slideDown()
+//      $('body').addClass("lock")
+//$('header').addClass("active");
+//  });
+//
+//  $(".close_menu").click(function () {
+//      $(".close_menu").hide()
+//      $(".mobile_menu").slideUp()
+//      $(".open").show()
+//      $('body').removeClass("lock");
+//      $('header').removeClass("active");
+//  });
+//})
 // script end
 
 // script btn_fix
 $(document).ready(function () {
   $(".call_btn").click(function () {
     $('.call_btn').addClass("click")
+    $('.form_call_white').show()
   });
   $(".chat_btn").click(function () {
     $('.chat_btn').addClass("click")
@@ -190,12 +255,23 @@ $(document).ready(function () {
 
   jQuery(function($){
     $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-        var block = $(".call_btn, .chat_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+        var block = $(".call_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
         if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
             && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
             $('.call_btn').removeClass("click") // если условия выполняются - скрываем наш элемент
-            $('.chat_btn').removeClass("click")
+            $('.form_call_white').hide()
         }
     });
+});
+
+jQuery(function($){
+  $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+      var block = $(".chat_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+          && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+            // если условия выполняются - скрываем наш элемент
+          $('.chat_btn').removeClass("click")
+      }
+  });
 });
 // script_fix end

@@ -66,6 +66,7 @@
   .padding{
     padding-bottom: 20px;
     margin: 0 auto;
+    width: 100%;
     &:hover{
       transform: translateY(0px);
       padding-bottom: 20px;
@@ -232,12 +233,12 @@
   }
 }
 
+.cat_img{
+  height: 270px;
+  width: 100%;
+}
 .grid_cat{
   .popup_work{
-    img{
-      height: 270px;
-      width: 100%;
-    }
     h3{
       font-size: 18px;
       line-height: 25px;
@@ -309,7 +310,15 @@
 
 .header_mobile{
   display: block;
-  height: 100%;
+  width: 100%;
+  z-index: 999;
+  height: 80px;
+}
+
+.header_mobile.active{
+	height: 100%;
+	overflow: auto;
+	position: fixed;
 }
 
 .header{
@@ -414,6 +423,41 @@ a.button{
   width: 50px;
   height: 50px;
 }
+
+.first-row h1{
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.first-row::before {
+    right: -119px;
+    top: -91px;
+    width: 240px;
+    height: 240px;
+}
+
+.first-row::after {
+    right: 168px;
+    bottom: 180px;
+    width: 70px;
+    height: 70px;
+    border: 15px solid #F8D72F;
+}
+
+.mobile_heading {
+    padding: 20px 95px;
+}
+
+.mobile_menu {
+    padding: 50px 95px 40px;
+}
+
+.sub-menu {
+  bottom: -15px;
+  position: relative;
+  display: none;
+  transition: 0s;
+}
 }
 
 @media (max-width: 1040px){
@@ -473,6 +517,7 @@ a.button{
   	height: 100vh;
     display: flex;
     justify-content: center;
+    overflow: auto;
   }
 
   .popup_block_contakt{
@@ -481,7 +526,7 @@ a.button{
     border-radius: none;
     width: 100%;
     height: auto;
-    padding: 0 94px;
+    padding:94px;
   }
 
 }
@@ -551,11 +596,24 @@ a.button{
 .popup_our_work img {
     width: 100%;
 }
+
+.mobile_heading{
+  padding: 16px 15px;
+}
+
+.header_mobile{
+  height: 60px;
+
+}
+
+.mobile_menu{
+  padding: 50px 15px 40px;
+}
 }
 
 @media (max-width: 768px){
   .container{
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .s_title::before {
@@ -904,7 +962,7 @@ a.button{
 
 .slider .slick-arrow {
     position: absolute;
-    bottom: -17%;
+    bottom: -78px;
 }
 
 .a_our_works .a_our_works_1 h3 {
@@ -912,6 +970,7 @@ a.button{
     line-height: 19px;
     top: calc(50% - 10px);
     left: calc(50% - 39px);
+    display: block !important;
 }
 
 .a_our_works .a_our_works_1:hover .btn_all{
@@ -996,7 +1055,8 @@ a.button{
   padding: 88px 20px 0;
   border-radius: 0;
   margin: 0;
-  height: 690px;
+  height: 100%;
+  overflow: auto;
 }
 
 .popup-dismiss_mob{
@@ -1017,11 +1077,11 @@ a.button{
 
 .chat_btn{
   bottom: 20px;
-  right: 25px;
+  right: 15px;
 }
 
 .call_btn{
-  left: 25px;
+  left: 15px;
   bottom: 20px;
 }
 
@@ -1059,6 +1119,7 @@ a.button{
 .form_call_white{
   padding: 0;
   background: transparent;
+  justify-content: flex-end;
   img{
     filter: invert(1);
   }
@@ -1077,7 +1138,7 @@ a.button{
 }
 
 .popup_our_work video{
-  height: auto;
+  height: 245px;
 }
 
 .grade_star img{
@@ -1124,6 +1185,40 @@ a.button{
   display: none;
 }
 
+.table-row_slider{
+  display: none;
+}
+
+.first-row h1{
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.first-row p{
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.first-row::before {
+    top: -60px;
+    width: 188px;
+    height: 188px;
+}
+
+.first-row::after {
+    right: -25px;
+    bottom: 165px;
+    width: 50px;
+    height: 50px;
+    border: 13px solid #F8D72F;
+}
+
+.first-row{
+  padding: 230px 0 40px;
+  background-size: cover !important;
+}
+
+
 }
 
 @media (max-width: 560px){
@@ -1148,9 +1243,11 @@ a.button{
   position: relative;
   padding-bottom: 70px;
   justify-content: space-between;
+  margin-top: 30px;
+
   a.arows{
     position: absolute;
-    width: 40%;
+    width: 45%;
     img{
       width: 80px;
     }
@@ -1171,6 +1268,9 @@ a.button{
 
 .slider .padding {
     padding-top: 20px;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .block_mini_info{
@@ -1220,8 +1320,13 @@ a.button{
     margin: 0;
   }
 }
+
+.slider .slick-arrow{
+  width: 25%;
+}
 .similar_news .slider .slick-arrow{
   bottom: -24.5%;
+  width: 30%;
 }
 
 .grid_servise{
@@ -1236,7 +1341,7 @@ a.button{
 }
 
 .servise_all{
-	padding: 0 0 74px;
+	padding: 0;
 }
 
 .grid_cat{
@@ -1296,6 +1401,45 @@ a.button{
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+.spesialists_all{
+  padding: 30px 0 50px;
+}
+
+.name div {
+  width: 48%;
+}
+
+.tel_mail div {
+  width: 48%;
+}
+
+.screen1 .button-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mobile_heading{
+  padding: 16px 15px;
+}
+
+.header_mobile{
+  height: 60px;
+}
+
+.mobile_menu{
+  padding: 50px 15px 40px;
+}
+
+.padding{
+  padding-left: 0;
+  padding-right: 0;
 }
 
 }

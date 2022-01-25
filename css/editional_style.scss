@@ -2,6 +2,7 @@ $red: red;
 
 body{
 	background: #00060C;
+	overflow-x: hidden;
 }
 .container{
     width: 1232px;
@@ -69,6 +70,125 @@ body{
   opacity: 0.8;
   box-sizing: border-box;
 }
+
+
+
+
+
+
+
+
+
+.first-row{
+	position: relative;
+	padding: 60px 0 170px;
+	.button.eyllow{
+		margin-right: 20px;
+	}
+	h1{
+		font-weight: bold;
+		font-size: 45px;
+		line-height: 61px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		max-width: 625px;
+	}
+	p{
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		color: #FFFFFF;
+		max-width: 520px;
+		margin-bottom: 50px;
+	}
+}
+
+.first-row::before{
+  content: "";
+	position: absolute;
+	display: block;
+  right: -44px;
+  top: -110px;
+	width: 331px;
+	height: 331px;
+  border-radius: 50%;
+  background: #F8D72F;
+  opacity: 0.8;
+	z-index: 999;
+}
+
+.first-row::after{
+  content: "";
+	position: absolute;
+	display: block;
+  right: 316px;
+  bottom: 180px;
+	width: 100px;
+	height: 100px;
+  border-radius: 50%;
+  border: 20px solid #F8D72F;
+  opacity: 0.8;
+  box-sizing: border-box;
+}
+
+.table-row_slider{
+	margin-top: -100px;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 45px;
+	.slick-track{
+		border: 2px solid #FFFFFF;
+		width: 100% !important;
+	}
+	.slick-list.draggable{
+		padding: 0 !important;
+	}
+	p{
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 22px;
+		text-align: center;
+		color: #FFFFFF;
+		margin: 0;
+		padding: 14px;
+		cursor: pointer;
+		transition: 0.3s;
+		width: 410px !important;
+		&:hover{
+			background: #96A3AC;
+		}
+	}
+	.table-block.center{
+		border-left: 2px solid #FFFFFF;
+		border-right: 2px solid #FFFFFF
+	}
+}
+
+.table-block.slick-current{
+	background: #00060C;
+}
+
+.slider_screen_1{
+	position: relative;
+	z-index: 1;
+}
+
+.side-bar-wrap{
+	position: relative;
+	z-index: 2;
+}
+
+.side-bar:after{
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
 
 .bread_crumbs p{
   font-weight: normal;
@@ -199,7 +319,7 @@ a.btn{
 .grid_specialists{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap:16px;
+  grid-column-gap:0;
   cursor: pointer;
 	align-items: center;
 }
@@ -227,9 +347,10 @@ a.btn{
     list-style: none;
   }
 	a:hover{
-		background: transparent;
-		color: #F8D72F;
+		background: #F8D72F;
+		color: black;
 		border: 2px solid #F8D72F;
+		box-shadow: 0px 10px 35px rgba(248, 215, 47, 0.5);
 	}
   a, span{
 		display: flex;
@@ -506,8 +627,9 @@ a.btn{
 	img{
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 		object-fit: cover;
+		transition: 0.5s;
 	}
 	&:hover{
 		border: 2px solid #FFFFFF;
@@ -531,6 +653,7 @@ a.btn{
 		}
 		img{
 			filter: blur(10px);
+			height: 100%;
 		}
 		.news_text{
 			background: initial;
@@ -993,6 +1116,15 @@ table{
 	}
 }
 
+.cat_img{
+	height: 400px;
+	width: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+}
+
 .grid_cat{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -1013,14 +1145,18 @@ table{
 		display: block;
 		text-decoration: none;
 		cursor: pointer;
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+		}
 		img{
-			height: 400px;
-			width: auto;
+			height: 100%;
+			width: 100%;
 			object-fit: cover;
-			border: 1px solid #FFFFFF;
-			box-sizing: border-box;
 			filter: drop-shadow(0px 10px 35px rgba(0, 61, 108, 0.33));
 			border-radius: 10px;
+			transition: 0.5s;
 		}
 		h3{
 			font-weight: bold;
@@ -1346,11 +1482,11 @@ table{
 .header_mobile{
 	background: #00060C;
 	display: none;
-	overflow-x: hidden;
+	transition: all 0.3s ease 0s;
 }
 
 .mobile_heading{
-	padding: 26px 0;
+	padding: 26px 95px;
 	display: flex;
 	justify-content: space-between;
 	.close_menu{
@@ -1358,7 +1494,13 @@ table{
 	}
 }
 
+.mobile_menu.active{
+	display: block;
+}
+
 .mobile_menu{
+	padding: 0 95px;
+	overflow: hidden;
 	display: none;
 	.last-row{
 		p{
@@ -1402,11 +1544,16 @@ table{
 .mobile_menu .menu-item-has-children{
 	 border-radius: 0 0 0 0;
 	 &:hover{
-		 padding-bottom: 0;
 		 .sub-menu{
-			 position: relative;
-		 }
+ 			display: none;
+ 		}
 	 }
+}
+
+.sub-menu.active_sub{
+	position: relative;
+	z-index: 999;
+	background: #111F2A;
 }
 
 .mobile_menu .menu-item-has-children:after{
@@ -1418,6 +1565,7 @@ table{
 .mobile_menu .sub-menu{
 	min-width: 100%;
 	border-radius: 0;
+	display: none;
 	li{
 		padding: 8px 95px;
 		&:hover{
@@ -1439,9 +1587,20 @@ body.lock {
 .active {
     position: relative;
     z-index: 999;
-    position: fixed;
-    height: 100%;
     width: 100%;
+		background: black;
+		overflow: auto;
+}
+
+.header_mobile.active{
+	height: 100%;
+	overflow: auto;
+	position: fixed;
+}
+
+.mobile_menu.active{
+	width: 100%;
+	overflow: hidden;
 }
 
 .side-bar_block{
@@ -1802,13 +1961,13 @@ button.mfp-close{
 		width: 795px;
 		height: 500px;
 		object-fit: cover;
-		border-radius: 20px;
+		border-radius: 10px;
 	}
 	video{
 		width: 795px;
 		height: 500px;
 		object-fit: cover;
-		border-radius: 20px;
+		border-radius: 10px;
 	}
 	.cat_bottom{
 		display: flex;
@@ -2055,4 +2214,67 @@ img.hover-shadow {
 	display: none;
 }
 
+
+.slider_screen_1 {
+    position: relative;
+	}
+
+
+
+.buger_btn{
+  width: 30px;
+  height: 26px;
+  cursor: pointer;
+	position: relative;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buger_btn span{
+	position: absolute;
+  height: 4px;
+  background: #FFFFFF;
+  display: block;
+  transition: .3s;
+  border-radius: 10px;
+	width: 23px;
+}
+.buger_btn span:before, .buger_btn span:after{
+  width: 30px;
+  position: absolute;
+  height: 4px;
+  background: #FFFFFF;
+  display: block;
+  transition: .3s;
+  border-radius: 10px;
+	right: 0;
+}
+.buger_btn span:before{
+  content: "";
+  top: -10px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.buger_btn span:after{
+  content: "";
+  bottom: -10px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.buger_btn span.open:before{
+  content: "";
+  top: 0px;
+  transform: rotate(45deg);
+  transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.buger_btn span.open:after{
+  content: "";
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.buger_btn span.open{
+  background: rgba(255, 255, 255, 0);
+}
 @import "media.scss";

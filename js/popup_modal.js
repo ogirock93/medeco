@@ -1,6 +1,6 @@
 
   function openModal() {
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModal").style.display = "flex";
   }
 
   function closeModal() {
@@ -29,6 +29,6 @@
         slides[i].style.display = "none";
     }
 
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "flex";
 
   }
