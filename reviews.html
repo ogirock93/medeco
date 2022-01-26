@@ -103,7 +103,7 @@
 <div class="cat_1 reviews">
   <div class="container">
     <div class="grid_cat">
-      <div class="popup_work" onclick="openModal();currentSlide(1)" >
+      <div class="popup_work" onclick="openModal_2();currentSlide_2(1)" >
         <div class="gradient">
           <img src="img_2/otzuv_photo.png" alt="photo">
         </div>
@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <div class="popup_work" onclick="openModal();currentSlide(2)" >
+      <div class="popup_work" onclick="openModal_2();currentSlide_2(2)" >
         <div class="gradient">
           <img src="img_2/otzuv_photo.png" alt="photo">
         </div>
@@ -131,7 +131,7 @@
         </div>
       </div>
 
-      <div class="popup_work" onclick="openModal();currentSlide(3)" >
+      <div class="popup_work" onclick="openModal_2();currentSlide_2(3)" >
         <div class="gradient">
           <img src="img_2/otzuv_photo.png" alt="photo">
         </div>
@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <div class="popup_work" onclick="openModal();currentSlide(4)" >
+      <div class="popup_work" onclick="openModal_2();currentSlide_2(4)" >
         <div class="gradient">
           <img src="img_2/otzuv_photo.png" alt="photo">
         </div>
@@ -159,15 +159,15 @@
         </div>
       </div>
     </div>
-    <ul class="page_number">
-      <li><a href="#" class="arows disabled left"><img src="img_2/arrow_left.svg" alt="left"></a></li>
-      <li><span class="curent">1</span></li>
-      <li> <a href="#">2</a> </li>
-      <li> <a href="#">3</a> </li>
-      <li><span>...</span></li>
-      <li> <a href="#">12</a> </li>
-      <li><a href="#" class="arows right"><img src="img_2/arrow_right.svg" alt="right"></a></li>
-    </ul>
+		<ul class="page_number">
+			<li class="arows left"><a href="#" class="arows disabled left"> <img class="arrow_mob" src="img_2/Arrow_mob_left.svg" alt="right"> <img class="arrow_deskt" src="img_2/arrow_left.svg" alt="left"></a></li>
+			<li><span class="curent">1</span></li>
+			<li> <a href="#">2</a> </li>
+			<li> <a href="#">3</a> </li>
+			<li><span>...</span></li>
+			<li> <a href="#">12</a> </li>
+			<li class="arows right"><a href="#" class="arows right"><img class="arrow_mob" src="img_2/Arrow_mob_right.svg" alt="right"><img class="arrow_deskt" src="img_2/arrow_right.svg" alt="right"></a></li>
+		</ul>
   </div>
 </div>
 
@@ -237,10 +237,9 @@
 </div>
 
 
-<div id="myModal" class="modal">
+<div id="myModal_2" class="modal">
   <div class="modal-content">
-		<span class="close cursor" onclick="closeModal()">&times;</span>
-    <div data-simplebar class="popup_our_work reviews">
+    <div class="review">
    		<video controls src="Trees-81674.mp4"></video>
       <div class="cat_bottom">
         <div class="cat_text">
@@ -265,7 +264,7 @@
 			</div>
     </div>
 
-		<div data-simplebar class="popup_our_work reviews">
+		<div class="review">
 			<video controls src="Trees-81674.mp4"></video>
 			<div class="cat_bottom">
 				<div class="cat_text">
@@ -290,7 +289,7 @@
 			</div>
 		</div>
 
-		<div data-simplebar class="popup_our_work reviews">
+		<div class="review">
 			<video controls src="Trees-81674.mp4"></video>
 			<div class="cat_bottom">
 				<div class="cat_text">
@@ -315,7 +314,7 @@
 			</div>
 		</div>
 
-		<div data-simplebar class="popup_our_work reviews">
+		<div class="review">
 			<video controls src="Trees-81674.mp4"></video>
 			<div class="cat_bottom">
 				<div class="cat_text">
@@ -341,14 +340,15 @@
 		</div>
 
 
-    <a class="prev" onclick="plusSlides(-1)">
+    <a class="prev" onclick="plusSlides_2(-1)">
 			<img class="desctop" src="img_2/arrow_left.svg" alt="left">
 			<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
 		</a>
-    <a class="next" onclick="plusSlides(1)">
+    <a class="next" onclick="plusSlides_2(1)">
 			<img class="desctop" src="img_2/arrow_right.svg" alt="right">
 			<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
 		</a>
+		<span class="close_reviews"> <img src="img_2/close_popup_reviews.svg" alt="icon"> </span>
   </div>
 </div>
 
@@ -361,8 +361,8 @@
 <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/common.js"></script>
+<script src="js/popup_modal_reviews.js"></script>
 <script src="js/script.js"></script>
-<script src="js/popup_modal.js"></script>
 <script src="js/slick.min.js"></script>
 
 

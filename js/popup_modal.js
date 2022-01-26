@@ -3,9 +3,11 @@
     document.getElementById("myModal").style.display = "flex";
   }
 
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
+  $('#myModal').click(function(e) {
+  if ($(e.target).closest('.popup_our_work, .prev, .next').length == 0) {
+    $(this).fadeOut();
   }
+});
 
   var slideIndex = 1;
   showSlides(slideIndex);

@@ -264,14 +264,6 @@
     line-height: 25px;
   }
 
-  .slider_reviews .slick-arrow.slick-prev {
-    left: 33%;
-  }
-
-  .slider_reviews .slick-arrow.slick-next {
-    left: calc(33% + 120px);
-  }
-
   .header_mobile {
     display: block;
     width: 100%;
@@ -421,6 +413,30 @@
     display: none;
     transition: 0s;
   }
+
+  .slider_reviews .slick-list {
+    padding-left: 95px;
+  }
+
+  .cat_1 {
+    padding-bottom: 0;
+  }
+
+  .modal {
+    padding-top: 0;
+  }
+
+  .review {
+    width: 646px;
+  }
+  .review video {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .review h4 {
+    width: 80%;
+  }
 }
 @media (max-width: 1040px) {
   .contact_grafic {
@@ -497,6 +513,10 @@
     padding: 0 40px;
   }
 
+  .slider_reviews .slick-list {
+    padding-left: 40px;
+  }
+
   .news_grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -535,14 +555,6 @@
     top: -25px;
   }
 
-  .slider_reviews .slick-arrow.slick-prev {
-    left: 28%;
-  }
-
-  .slider_reviews .slick-arrow.slick-next {
-    left: calc(28% + 120px);
-  }
-
   .popup_our_work video {
     width: 100%;
   }
@@ -560,7 +572,7 @@
   }
 
   .mobile_heading {
-    padding: 16px 15px;
+    padding: 16px 40px;
   }
 
   .header_mobile {
@@ -568,7 +580,15 @@
   }
 
   .mobile_menu {
-    padding: 50px 15px 40px;
+    padding: 50px 40px 40px;
+  }
+
+  .specialist {
+    margin: 0 auto;
+  }
+
+  .review {
+    width: 500px;
   }
 }
 @media (max-width: 768px) {
@@ -581,6 +601,14 @@
     height: 122px;
     top: -20px;
     right: -75px;
+  }
+
+  .mobile_heading {
+    padding: 16px 15px;
+  }
+
+  .mobile_menu {
+    padding: 50px 15px 40px;
   }
 
   .s_title::after {
@@ -1003,11 +1031,11 @@
     height: auto;
   }
 
-  .chat_btn:hover .form_chat {
+  .chat_btn.click .form_chat {
     width: 320px;
   }
 
-  .chat_btn:hover .chat_windows {
+  .chat_btn.click .chat_windows {
     width: 320px;
   }
 
@@ -1025,7 +1053,7 @@
     border-left: none;
   }
 
-  .call_btn:hover .mobile_input {
+  .call_btn.click .mobile_input {
     position: absolute;
     flex-direction: column;
     bottom: 77px;
@@ -1037,11 +1065,11 @@
     width: 235px;
     box-sizing: border-box;
   }
-  .call_btn:hover .mobile_input input {
+  .call_btn.click .mobile_input input {
     padding: 10px 0;
   }
 
-  .call_btn:hover .form_call {
+  .call_btn.click .form_call {
     width: 235px;
     box-sizing: border-box;
     display: flex;
@@ -1150,6 +1178,40 @@
     padding: 230px 0 40px;
     background-size: cover !important;
   }
+
+  .slider_reviews .slick-list {
+    padding: 0;
+  }
+
+  .slider_reviews .popup_work {
+    padding: 0 15px;
+  }
+
+  .review {
+    width: 100%;
+  }
+  .review h4 {
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .review video {
+    height: 300px;
+  }
+  .review .cat_bottom h3 {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+
+  .review .cat_bottom span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .close_reviews {
+    margin-top: 100px;
+  }
 }
 @media (max-width: 560px) {
   .grid_specialists {
@@ -1173,22 +1235,26 @@
     position: relative;
     padding-bottom: 70px;
     justify-content: space-between;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
+    max-width: 100%;
   }
-  .page_number a.arows {
+  .page_number .arows {
     position: absolute;
-    width: 45%;
+    width: 48%;
   }
-  .page_number a.arows img {
+  .page_number .arows a {
+    width: 100%;
+  }
+  .page_number .arows img {
     width: 80px;
   }
-  .page_number a.arows.left {
+  .page_number .arows.left {
     bottom: 0;
-    left: 4%;
+    left: 0;
   }
-  .page_number a.arows.right {
+  .page_number .arows.right {
     bottom: 0;
-    right: 4%;
+    right: 0;
   }
   .page_number a, .page_number span {
     height: 50px;
@@ -1358,5 +1424,38 @@
   .padding {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .button-wrap a {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow_deskt {
+    display: none;
+  }
+
+  .page_number a.arows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page_number a.arows img {
+    filter: invert(0);
+  }
+
+  .page_number .arows img {
+    width: 60%;
+  }
+
+  .arrow_mob {
+    display: block;
+    width: 100%;
   }
 }

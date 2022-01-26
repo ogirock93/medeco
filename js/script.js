@@ -15,6 +15,7 @@ $(document).ready(function(){
        breakpoint: 768,
        settings: {
          autoplay: true,
+         swipe: true,
          autoplaySpeed: 5000,
        }
      },
@@ -111,9 +112,9 @@ $(document).ready(function(){
     arrows:true,
     infinite: false,
     speed: 300,
-    slidesToShow: 1,
+    slidesToShow: 2.5,
     centerMode: false,
-    variableWidth: true,
+    variableWidth: false,
     responsive: [
      {
         breakpoint: 1200,
@@ -189,14 +190,14 @@ if ($("#contact_form").length > 0){
 }
 })
 
-
+// script burger
 $(document).ready(function () {
   $(".buger_btn").click(function (event) {
     $('body').toggleClass("lock")
     $('.mobile_heading').toggleClass("active");
-    $('.mobile_menu').toggleClass("active");
-    $('.header_mobile').toggleClass("active");
-    $('.buger_btn span').toggleClass("open");
+    $('.mobile_menu').slideToggle(200);
+   $('.header_mobile').toggleClass("active");
+   $('.buger_btn span').toggleClass("open");
     });
 
 $(".menu-item-has-children").click(function (event) {
@@ -215,27 +216,7 @@ $(".menu-item-has-children").click(function (event) {
     });
   });
 
-
-
 })
-// script burger
-//$(document).ready(function () {
-//  $(".open").click(function () {
-//      $(".open").hide()
-//      $(".close_menu").show()
-//      $(".mobile_menu").slideDown()
-//      $('body').addClass("lock")
-//$('header').addClass("active");
-//  });
-//
-//  $(".close_menu").click(function () {
-//      $(".close_menu").hide()
-//      $(".mobile_menu").slideUp()
-//      $(".open").show()
-//      $('body').removeClass("lock");
-//      $('header').removeClass("active");
-//  });
-//})
 // script end
 
 // script btn_fix
@@ -244,33 +225,52 @@ $(document).ready(function () {
     $('.call_btn').addClass("click")
     $('.form_call_white').show()
   });
+
+
   $(".chat_btn").click(function () {
     $('.chat_btn').addClass("click")
+    setTimeout(function(){
+    $('.chat_windows').slideDown(200)
+  },500)
+  });
+
+  $(".close_chat").click(function (e) {
+    $('.chat_windows').slideUp(200)
+    setTimeout(function(){
+    $('.chat_btn').removeClass("click")
+    },500)
+    e.stopPropagation()
+
+    return false
   });
 
 })
 
 
-
-
-  jQuery(function($){
-    $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
-        var block = $(".call_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
-        if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
-            && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            $('.call_btn').removeClass("click") // если условия выполняются - скрываем наш элемент
-            $('.form_call_white').hide()
-        }
-    });
+jQuery(function($){
+  $(document).click(function (e){ // отслеживаем событие клика по веб-документу
+      var block = $(".call_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
+      if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
+          && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
+          $('.call_btn').removeClass("click") // если условия выполняются - скрываем наш элемент
+          $('.form_call_white').hide()
+      }
+  });
 });
 
+
+
+
 jQuery(function($){
-  $(document).mouseup(function (e){ // отслеживаем событие клика по веб-документу
+  $(document).click(function (e){ // отслеживаем событие клика по веб-документу
       var block = $(".chat_btn"); // определяем элемент, к которому будем применять условия (можем указывать ID, класс либо любой другой идентификатор элемента)
       if (!block.is(e.target) // проверка условия если клик был не по нашему блоку
           && block.has(e.target).length === 0) { // проверка условия если клик не по его дочерним элементам
-            // если условия выполняются - скрываем наш элемент
+          $('.chat_windows').slideUp(200)
+          setTimeout(function(){
           $('.chat_btn').removeClass("click")
+          },500)
+            // если условия выполняются - скрываем наш элемент
       }
   });
 });

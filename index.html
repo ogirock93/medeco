@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Medeko</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -122,7 +123,7 @@
 
 
 	<div class="screen1_index">
-			<div class="slider_screen_1">
+			<div class="slider_screen_1" >
 				<div class="first-row" style="background: radial-gradient(75% 125.32% at 101% 41.14%, rgba(17, 31, 43, 0) 5.39%, rgba(17, 31, 43, 0.172414) 28.3%, rgba(17, 31, 43, 0.917879) 67.28%, #111F2B 79.36%), url(img/bg1.jpg);   background-size: contain;
 					background-repeat: no-repeat;
 					background-position: right;
@@ -208,7 +209,7 @@
 		<div class="container">
 			<h2>Наши работы</h2>
 			<div class="a_our_works">
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(1)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -216,7 +217,7 @@
 					</div>
 				</div>
 
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(2)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -224,7 +225,7 @@
 					</div>
 				</div>
 
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(3)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -232,7 +233,7 @@
 					</div>
 				</div>
 
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(4)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -240,7 +241,7 @@
 					</div>
 				</div>
 
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(5)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -248,7 +249,7 @@
 					</div>
 				</div>
 
-				<div class="a_our_works_1">
+				<div class="a_our_works_1" onclick="openModal();currentSlide(6)">
 					<a href="#"> <img src="img/works-img.jpg" alt="img"> </a>
 					<h3>Название 1</h3>
 					<div class="btn_all">
@@ -318,10 +319,11 @@
 	    background-repeat: no-repeat;
 	    background-position: right;
 	    background-repeat: no-repeat;">
-	  <div class="container">
-			<h2>Отзывы</h2>
+			<div class="container">
+				<h2>Отзывы</h2>
+			</div>
 	    <div class="slider_reviews">
-	      <div class="grid_cat">
+	      <div class="grid_cat" onclick="openModal_2();currentSlide_2(4)">
 	        <div class="popup_work" >
 	          <div class="gradient">
 	            <img src="img_2/otzuv_photo.png" alt="photo">
@@ -337,8 +339,8 @@
 	        </div>
 	      </div>
 
-	      <div class="grid_cat">
-	        <div class="popup_work" >
+	      <div class="grid_cat" onclick="openModal_2();currentSlide_2(4)">
+	        <div class="popup_work">
 	          <div class="gradient">
 	            <img src="img_2/otzuv_photo.png" alt="photo">
 	          </div>
@@ -353,8 +355,40 @@
 	        </div>
 	      </div>
 
-	      <div class="grid_cat">
-	        <div class="popup_work" >
+				<div class="grid_cat" onclick="openModal_2();currentSlide_2(4)">
+	        <div class="popup_work">
+	          <div class="gradient">
+	            <img src="img_2/otzuv_photo.png" alt="photo">
+	          </div>
+	          <div class="cat_bottom">
+	            <div class="cat_text">
+	              <h3>Видео-отзыв 1</h3>
+	            </div>
+	            <div class="data_cat">
+	              <span>18.05.20</span>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+
+				<div class="grid_cat" onclick="openModal_2();currentSlide_2(4)">
+	        <div class="popup_work">
+	          <div class="gradient">
+	            <img src="img_2/otzuv_photo.png" alt="photo">
+	          </div>
+	          <div class="cat_bottom">
+	            <div class="cat_text">
+	              <h3>Видео-отзыв 1</h3>
+	            </div>
+	            <div class="data_cat">
+	              <span>18.05.20</span>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+
+	      <div class="grid_cat" onclick="openModal_2();currentSlide_2(4)">
+	        <div class="popup_work">
 	          <div class="gradient">
 	            <img src="img_2/otzuv_photo.png" alt="photo">
 	          </div>
@@ -370,7 +404,6 @@
 	      </div>
 
 	    </div>
-	  </div>
 	</section>
 
 
@@ -528,11 +561,244 @@
 	</div>
 
 
+
+	<div id="myModal_2" class="modal">
+	  <div class="modal-content">
+	    <div class="review">
+	   		<video controls src="Trees-81674.mp4"></video>
+	      <div class="cat_bottom">
+	        <div class="cat_text">
+	          <h3>Видео-отзыв 1</h3>
+	        </div>
+	        <div class="data_cat">
+	          <span>18.05.20</span>
+	        </div>
+	      </div>
+				<div class="grade_popup">
+					<div class="grade_name">
+						<h4>Бобров Анатолий Викторович</h4>
+						<span>2 отзыва</span>
+					</div>
+					<div class="grade_star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+					</div>
+				</div>
+	    </div>
+
+			<div class="review">
+				<video controls src="Trees-81674.mp4"></video>
+				<div class="cat_bottom">
+					<div class="cat_text">
+						<h3>Видео-отзыв 2</h3>
+					</div>
+					<div class="data_cat">
+						<span>18.05.20</span>
+					</div>
+				</div>
+				<div class="grade_popup">
+					<div class="grade_name">
+						<h4>Бобров Анатолий Викторович</h4>
+						<span>2 отзыва</span>
+					</div>
+					<div class="grade_star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<video controls src="Trees-81674.mp4"></video>
+				<div class="cat_bottom">
+					<div class="cat_text">
+						<h3>Видео-отзыв 3</h3>
+					</div>
+					<div class="data_cat">
+						<span>18.05.20</span>
+					</div>
+				</div>
+				<div class="grade_popup">
+					<div class="grade_name">
+						<h4>Бобров Анатолий Викторович</h4>
+						<span>2 отзыва</span>
+					</div>
+					<div class="grade_star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+					</div>
+				</div>
+			</div>
+
+			<div class="review">
+				<video controls src="Trees-81674.mp4"></video>
+				<div class="cat_bottom">
+					<div class="cat_text">
+						<h3>Видео-отзыв 4</h3>
+					</div>
+					<div class="data_cat">
+						<span>18.05.20</span>
+					</div>
+				</div>
+				<div class="grade_popup">
+					<div class="grade_name">
+						<h4>Бобров Анатолий Викторович</h4>
+						<span>2 отзыва</span>
+					</div>
+					<div class="grade_star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+						<img src="img_2/star.png" alt="star">
+					</div>
+				</div>
+			</div>
+
+
+	    <a class="prev" onclick="plusSlides_2(-1)">
+				<img class="desctop" src="img_2/arrow_left.svg" alt="left">
+				<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+			</a>
+	    <a class="next" onclick="plusSlides_2(1)">
+				<img class="desctop" src="img_2/arrow_right.svg" alt="right">
+				<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+			</a>
+			<span class="close_reviews"> <img src="img_2/close_popup_reviews.svg" alt="icon"> </span>
+	  </div>
+	</div>
+
+
+
+
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+	    <div data-simplebar class="popup_our_work">
+	      <img src="img_2/cat_photo.png" alt="photo">
+	      <div class="cat_bottom">
+	        <div class="cat_text">
+	          <h3>Отбеливание зубов1</h3>
+	          <p>Категория 2</p>
+	        </div>
+	        <div class="data_cat">
+	          <span>18.05.20</span>
+	        </div>
+	      </div>
+	      <h4>Описание</h4>
+	      <p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	    Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+	    </div>
+
+	  <div data-simplebar class="popup_our_work">
+	    <img src="img_2/cat_photo.png" alt="photo">
+	    <div class="cat_bottom">
+	      <div class="cat_text">
+	        <h3>Отбеливание зубов2</h3>
+	        <p>Категория 2</p>
+	      </div>
+	      <div class="data_cat">
+	        <span>18.05.20</span>
+	      </div>
+	    </div>
+	    <h4>Описание</h4>
+	    <p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	  Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+
+	  </div>
+
+	<div data-simplebar class="popup_our_work">
+	  <img src="img_2/cat_photo.png" alt="photo">
+	  <div class="cat_bottom">
+	    <div class="cat_text">
+	      <h3>Отбеливание зубов3</h3>
+	      <p>Категория 2</p>
+	    </div>
+	    <div class="data_cat">
+	      <span>18.05.20</span>
+	    </div>
+	  </div>
+	  <h4>Описание</h4>
+	  <p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+
+	</div>
+
+	<div data-simplebar class="popup_our_work">
+	  <img src="img_2/cat_photo.png" alt="photo">
+	  <div class="cat_bottom">
+	    <div class="cat_text">
+	      <h3>Отбеливание зубов4</h3>
+	      <p>Категория 2</p>
+	    </div>
+	    <div class="data_cat">
+	      <span>18.05.20</span>
+	    </div>
+	  </div>
+	  <h4>Описание</h4>
+	  <p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+
+	</div>
+
+	<div data-simplebar class="popup_our_work">
+		<img src="img_2/cat_photo.png" alt="photo">
+		<div class="cat_bottom">
+			<div class="cat_text">
+				<h3>Отбеливание зубов5</h3>
+				<p>Категория 2</p>
+			</div>
+			<div class="data_cat">
+				<span>18.05.20</span>
+			</div>
+		</div>
+		<h4>Описание</h4>
+		<p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+	</div>
+
+	<div data-simplebar class="popup_our_work">
+		<img src="img_2/cat_photo.png" alt="photo">
+		<div class="cat_bottom">
+			<div class="cat_text">
+				<h3>Отбеливание зубов6</h3>
+				<p>Категория 2</p>
+			</div>
+			<div class="data_cat">
+				<span>18.05.20</span>
+			</div>
+		</div>
+		<h4>Описание</h4>
+		<p>Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.
+	Впервые ребенок должен показаться ортодонту в 7 лет. Поход к врачу опасно затягивать, ведь с возрастом сложнее устранить дефекты прикуса. Нередко запущенные случаи требуют удаление зубов или другого хирургического вмешательства. Родителям важно понимать, что ортодонтия не только устраняет эстетические проблемы, но и корректирует работу зубов и жевательной системы. Предупреждает их излишний износ. В дальнейшем человек избегает проблем с речью, глотанием, жеванием. Во многом предотвращается появление других заболеваний (например, пародонтит). Кроме того, правильный прикус облегчает соблюдать гигиену полости рта.</p>
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">
+		<img class="desctop" src="img_2/arrow_left.svg" alt="left">
+		<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+	</a>
+	<a class="next" onclick="plusSlides(1)">
+		<img class="desctop" src="img_2/arrow_right.svg" alt="right">
+		<img class="mob_img_popup" src="img_2/arrow_popup_mob.svg" alt="left">
+	</a>
+	  </div>
+	</div>
+
+
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/popup_modal_reviews.js"></script>
+	<script src="js/popup_modal.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/slick.min.js"></script>
 
