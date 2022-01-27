@@ -1212,6 +1212,10 @@
   .close_reviews {
     margin-top: 100px;
   }
+
+  .background::before {
+    background: radial-gradient(161% 149.32% at 92% 14.14%, rgba(17, 31, 43, 0) 5.39%, rgba(17, 31, 43, 0.172414) 22.3%, rgba(17, 31, 43, 0.917879) 55.28%, #111F2B 79.36%);
+  }
 }
 @media (max-width: 560px) {
   .grid_specialists {

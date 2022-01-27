@@ -9,23 +9,23 @@ if ($(e.target).closest('.review, .prev, .next').length == 0) {
 });
 
 var slideIndex_2 = 1;
-showSlides(slideIndex_2);
+showSlides_2(slideIndex_2);
 
-function plusSlides_2(n) {
-  showSlides(slideIndex_2 += n);
+function plusSlides_2(r) {
+  showSlides_2(slideIndex_2 += r);
 }
 
-function currentSlide_2(n) {
-  showSlides(slideIndex_2 = n);
+function currentSlide_2(r) {
+  showSlides_2(slideIndex_2 = r);
 }
 
-function showSlides(n) {
-  var i;
+function showSlides_2(r) {
+  var ir;
   var slides = document.getElementsByClassName("review");
-  if (n > slides.length) {slideIndex_2 = 1}
-  if (n < 1) {slideIndex_2 = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+  if (r > slides.length) {slideIndex_2 = 1}
+  if (r < 1) {slideIndex_2 = slides.length}
+  for (ir = 0; ir < slides.length; ir++) {
+      slides[ir].style.display = "none";
   }
 
   slides[slideIndex_2-1].style.display = "flex";
